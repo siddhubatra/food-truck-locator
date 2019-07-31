@@ -1,12 +1,16 @@
-### Schema
+CREATE DATABASE trucks_db;
+USE trucks_db;
 
-CREATE DATABASE cat_db;
-USE cat_db;
-
-CREATE TABLE cats
+CREATE TABLE trucks
 (
-	id int NOT NULL AUTO_INCREMENT,
-	name varchar(255) NOT NULL,
-	sleepy BOOLEAN DEFAULT false,
-	PRIMARY KEY (id)
+	id int NOT NULL
+	AUTO_INCREMENT,
+	name varchar
+	(255) NOT NULL,
+	location varchar
+	(255) not null,
+	menu array not null,
+	approved BOOLEAN DEFAULT false,
+	PRIMARY KEY
+	(id)
 );
