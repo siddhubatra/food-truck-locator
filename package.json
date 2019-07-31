@@ -1,15 +1,19 @@
 {
-  "name": "eslint-example",
+  "name": "update-delete",
   "version": "1.0.0",
-  "description": "Eslint Example",
+  "description": "",
   "main": "server.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "lint": "eslint **/*.js --quiet",
-    "test": "npm run lint"
+    "watch": "nodemon server.js"
   },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "eslint": "^4.19.1"
+    "express": "^4.16.3",
+    "mysql2": "^1.6.4",
+    "sequelize": "^4.41.2"
   }
 }
