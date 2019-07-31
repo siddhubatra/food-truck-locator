@@ -1,24 +1,53 @@
-<ul>
-  {{#each locations}}
-  <li><button class="locationButton" data-id="{{this.location}}">
-      {{data}}
-    </button></li>
-  {{/each}}
-</ul>
+<div class="container">
 
-<h2>Add a Truck</h2>
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="truckName">Truck Name:</label>
-    <input type="text" id="truckName" name="truckName">
+  <div class="row">
+    <div class="col-sm-12">
+      <center>
+        <h1>Food Truck Locator</h1>
+      </center>
+    </div>
   </div>
 
-  <select name="locationDropDown">
-    {{#each locations}}
-    <option> {{data}} </option>
-    {{/each}}
-  </select>
-  <br><br>
-  <button type="submit">Add Truck</button>
-</form>
+  <div class="row">
+    <div class="col-md-12">
+      <center>
+        <h3>FTL</h3>
+        <ul>
+          {{#each locations}}
+          <li><button class="locationButton" data-id="{{this.id}}">
+              {{this.location}}
+            </button></li>
+          {{/each}}
+        </ul>
+
+        <h2>Add a Truck</h2>
+        <form class="create-form">
+
+          <div class="form-group">
+            <label for="truckName">Truck Name:</label>
+            <input type="text" id="truckName" name="truckName">
+          </div>
+
+          <div class="form-group">
+            <label for="truckLocation">Truck Location:</label>
+            <select name="locationDropDown">
+              {{#each locations}}
+              <option> {{this.location}} </option>
+              {{/each}}
+            </select>
+            <br><br>
+          </div>
+
+          <div class="form-group">
+            <label for="cuisineName">Type of Cuisine (ex: Thai):</label>
+            <input type="text" id="cuisineName" name="cuisineName">
+          </div>
+
+          <button type="submit">Add Truck</button>
+        </form>
+
+      </center>
+    </div>
+  </div>
+
+</div>
