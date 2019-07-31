@@ -1,0 +1,29 @@
+<div class="container">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <center>
+                <h1>These are the trucks in </h1> {{trucks.location}}
+            </center>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <center>
+                <ul>
+                    {{#each trucks}}
+                    <li> {{this.name}}
+                        <ul>
+                            <li> {{this.type}} </li>
+                            <li> <button class="menuButton" data-id="{{this.id}}">Menu</button></li>
+                        </ul>
+                    </li>
+                    {{/each}}
+                </ul>
+
+            </center>
+        </div>
+    </div>
+
+</div>
