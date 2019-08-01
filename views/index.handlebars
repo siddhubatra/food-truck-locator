@@ -1,27 +1,43 @@
 <div class="container">
+  <div id="stuff">
+    <h1>Hungry?</h1>
+    <h3>Find a truck near you.</h3>
+  </div>
 
-  <div class="row">
-    <div class="col-sm-12">
-      <center>
-        <h1>Food Truck Locator</h1>
-      </center>
+  <div id="pics">
+    <div class="ui grid">
+      <div class="row">
+        <div class="four wide column img-wrap">
+          <img src="/assets/img/ballston-city.jpg">
+          <p class="label">Ballston</p>
+        </div>
+        <div class="four wide column img-wrap">
+          <img src="/assets/img/crystalcity.jpg">
+        </div>
+        <div class="four wide column img-wrap">
+          <img src="/assets/img/georgetown-city.jpg">
+        </div>
+        <div class="four wide column img-wrap">
+          <img src="/assets/img/district-wharf.jpg">
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <center>
-        
-        {{#each locations}}
-        <a href="/{{this.location}}" class="locationButton" data-id="{{this.location}}" >
-        {{this.location}}
-        </a>
-        <br>
-        {{/each}}     
-        <a href="/addtruck">Got a Truck? Add it to Our Database!</a>
-        
-      </center>
-    </div>
-  </div>
 
 </div>
+{{!-- <div class="row">
+  <div class="col-md-12">
+    <center>
+
+      {{#each locations}}
+      <a href="/{{this.location}}" class="locationButton" data-id="{{this.location}}">
+        {{this.location}}
+      </a>
+      <br>
+      {{/each}}
+      <a href="/addtruck">Got a Truck? Add it to Our Database!</a>
+
+    </center>
+  </div>
+</div> --}}
