@@ -11,17 +11,15 @@
   <div class="row">
     <div class="col-md-12">
       <center>
-        <ul>
-          {{#each locations}}
-          <li><button class="locationButton" data-id="{{this.id}}">
-              {{this.location}}
-            </button></li>
-          {{/each}}
-        </ul>
-        <button>
-          <a href="/add-truck">Got a Truck? Add it to Our Database!</a>
-        </button>
-
+        
+        {{#each locations}}
+        <a href="/{{this.location}}" class="locationButton" data-id="{{this.location}}" >
+        {{this.location}}
+        </a>
+        <br>
+        {{/each}}     
+        <a href="/addtruck">Got a Truck? Add it to Our Database!</a>
+        
       </center>
     </div>
   </div>
