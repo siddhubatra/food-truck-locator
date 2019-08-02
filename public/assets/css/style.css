@@ -89,3 +89,19 @@ h3 {
   top: 43%;
   left: 12%;
 }
+
+/* #headImg {
+  position: relative;
+} */
+
+#homeBtn {
+  position: fixed;
+  right: 0;
+  font-size: 4em;
+  z-index: 100;
+}
+
+#home {
+  color: white;
+  background: black;
+}
