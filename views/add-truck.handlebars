@@ -1,60 +1,35 @@
 <h2>Add a Truck</h2>
-<form class="create-truck">
 
-    <div class="form-group">
-        <label for="truckName">Truck Name:</label>
-        <input type="text" id="truckName" name="truckName">
+<form class="ui form create-truck">
+    <div class="field">
+        <label>Truck Name</label>
+        <input type="text" id="truckName" name="truckName" placeholder="Joey's Tacos">
     </div>
-
-    <div class="form-group">
-
-        <label for="truckLocation">Truck loc:</label>
-        <input type="text" id="truckLocation" name="truckLocation">
-        <br><br>
+    <div class="field">
+        <label>Location</label>
+        <div class="ui selection dropdown">
+            <input type="hidden" name="truckLocation" id="truckLocation">
+            <i class="dropdown icon"></i>
+            <div class="default text">Select a Location</div>
+            <div class="menu">
+                <div class="item" data-value="3">Ballston</div>
+                <div class="item" data-value="2">Crystal City</div>
+                <div class="item" data-value="1">Georgetown</div>
+                <div class="item" data-value="0">District Wharf</div>
+            </div>
+        </div>
     </div>
+    <label for="truckLocation">Truck Location:</label>
+    <select name="locationDropDown" id="truckLocation">
+        <option>Ballston</option>
+        <option>Crystal City</option>
+        <option>Georgetown</option>
+        <option>District Wharf</option>
+    </select>
 
-    <div class="form-group">
-        <label for="cuisineName">Type of Cuisine (ex: Thai):</label>
-        <input type="text" id="cuisineName" name="cuisineName">
+    <div class="field">
+        <label>Type of Cuisine:</label>
+        <input type="text" id="cuisineName" name="cuisineName" placeholder="Indian">
     </div>
-
-
-    <div class="form-group">
-        
-
-        <label for="dish">Dish:</label>
-        <input type="text" id="dish" name="dish">
-       
-        <label for="price">Price($):</label>
-        <input type="text" id="price" name="price">
-
-        <button type="submit">Add Truck</button>
-
-       {{!--  <button type="submit">Add Dish</button> --}}
-
-    </div>
-{{!--     <center><h3>Truck you added:</h3>
-               
-    {{ truck.[0].name }}
-     
-        </center>
-    <center>
-        <h3>Dishes you added:</h3>
-        {{#each truck}}
-        <p>Dish: {{this.dish_name}}
-        Price: ${{this.dish_price}}</p>
-        {{/each}}
-        </center> --}}
-
-    
-    
+    <button class="ui button" type="submit">Submit</button>
 </form>
-
- 
-
-<form class="create-menu">
-
-    
-    
-</form>
-

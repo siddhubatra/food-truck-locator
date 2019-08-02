@@ -25,38 +25,38 @@ function objToSql(ob) {
 }
 
 var orm = {
-  selectLocations: function(tableInput, cb) {
+  selectLocations: function (tableInput, cb) {
     var queryString = "SELECT DISTINCT location FROM " + tableInput;
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
       cb(result);
     });
   },
-  selectTrucks: function(table, condition, cb) {
-    var queryString = "SELECT * FROM " + table + " WHERE " + condition;
-    connection.query(queryString, function(err, result) {
+  selectTrucks: function (table, condition, cb) {
+    var queryString = "SELECT DISTINCT name, location FROM " + table + " WHERE " + condition;
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
-      
+
       cb(result);
     });
   },
 
-  menuTrucks: function(table, condition, cb) {
+  menuTrucks: function (table, condition, cb) {
     var queryString = "SELECT * FROM " + table + " WHERE " + condition;
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
-      
+
       cb(result);
     });
   },
-  
-  insertTruck: function(table, cols, vals, cb) {
+
+  insertTruck: function (table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -68,7 +68,7 @@ var orm = {
 
     console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
+    connection.query(queryString, vals, function (err, result) {
       if (err) {
         throw err;
       }
@@ -77,7 +77,7 @@ var orm = {
     });
   },
 
-  insertMenu: function(table, cols, vals, cb) {
+  insertMenu: function (table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -89,7 +89,7 @@ var orm = {
 
     console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
+    connection.query(queryString, vals, function (err, result) {
       if (err) {
         throw err;
       }
@@ -98,26 +98,26 @@ var orm = {
     });
   },
 
-/*   showDish: function(tableInput, cb) {
-    var queryString = "SELECT * FROM " + tableInput + " WHERE submitted = 'false'";
-    connection.query(queryString, function(err, result) {
-      if (err) {
-        throw err;
-      }
-      cb(result);
-    });
-  }, */
+  /*   showDish: function(tableInput, cb) {
+      var queryString = "SELECT * FROM " + tableInput + " WHERE submitted = 'false'";
+      connection.query(queryString, function(err, result) {
+        if (err) {
+          throw err;
+        }
+        cb(result);
+      });
+    }, */
 
-  showTruck: function(table, cb) {
+  showTruck: function (table, cb) {
     var queryString = "SELECT * FROM " + table + " WHERE submitted='false'";
-    connection.query(queryString, function(err, result) {
+    connection.query(queryString, function (err, result) {
       if (err) {
         throw err;
       }
       cb(result);
     });
   },
-  
+
 
   /*  
   updateOne: function(table, objColVals, condition, cb) {
