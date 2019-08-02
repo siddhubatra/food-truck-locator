@@ -12,12 +12,37 @@ var trucks = {
       cb(res);
     });
   },
-/*   updateOne: function(objColVals, condition, cb) {
-    orm.updateOne("trucks", objColVals, condition, function(res) {
+
+  menuTrucks: function(condition, cb) {
+    orm.menuTrucks("trucks", condition, function(res) {
       cb(res);
     });
-  } */
+  },
+  insertTruck: function(objColVals, condition, cb) {
+    orm.insertTruck("trucks", objColVals, condition, function(res) {
+      cb(res);
+    });
+  },
+
+  insertMenu: function(objColVals, condition, cb) {
+    orm.insertMenu("trucks", objColVals, condition, function(res) {
+      cb(res);
+    });
+  },
+
+  showDish: function(cb) {
+    orm.showDish("trucks", function(res) {
+      cb(res);
+    });
+  },
+
+  showTruck: function(cb) {
+    orm.showTruck("trucks", function(res) {
+      cb(res);
+    });
+  }
+  
 };
 
-// Export the database functions for the controller (catsController.js).
+
 module.exports = trucks;

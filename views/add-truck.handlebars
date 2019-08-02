@@ -1,5 +1,5 @@
 <h2>Add a Truck</h2>
-<form class="create-form">
+<form class="create-truck">
 
     <div class="form-group">
         <label for="truckName">Truck Name:</label>
@@ -7,12 +7,9 @@
     </div>
 
     <div class="form-group">
-        <label for="truckLocation">Truck Location:</label>
-        <select name="locationDropDown">
-            {{#each locations}}
-            <option> {{this.location}} </option>
-            {{/each}}
-        </select>
+
+        <label for="truckLocation">Truck loc:</label>
+        <input type="text" id="truckLocation" name="truckLocation">
         <br><br>
     </div>
 
@@ -21,5 +18,43 @@
         <input type="text" id="cuisineName" name="cuisineName">
     </div>
 
-    <button type="submit">Add Truck</button>
+
+    <div class="form-group">
+        
+
+        <label for="dish">Dish:</label>
+        <input type="text" id="dish" name="dish">
+       
+        <label for="price">Price($):</label>
+        <input type="text" id="price" name="price">
+
+        <button type="submit">Add Truck</button>
+
+       {{!--  <button type="submit">Add Dish</button> --}}
+
+    </div>
+{{!--     <center><h3>Truck you added:</h3>
+               
+    {{ truck.[0].name }}
+     
+        </center>
+    <center>
+        <h3>Dishes you added:</h3>
+        {{#each truck}}
+        <p>Dish: {{this.dish_name}}
+        Price: ${{this.dish_price}}</p>
+        {{/each}}
+        </center> --}}
+
+    
+    
 </form>
+
+ 
+
+<form class="create-menu">
+
+    
+    
+</form>
+

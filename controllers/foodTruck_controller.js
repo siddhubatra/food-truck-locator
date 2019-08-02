@@ -14,7 +14,7 @@ router.get("/", function(req, res) {
   });
 });
 
-router.get("/addtruck", function(req, res) {
+/* router.get("/addtruck", function(req, res) {
   trucks.selectLocations(function(data) {
     var hbsObject = {
       locations: data
@@ -22,7 +22,26 @@ router.get("/addtruck", function(req, res) {
     console.log(hbsObject);
     res.render("add-truck", hbsObject);
   });
+}); */
+
+router.get("/addtruck", function(req, res) {
+  trucks.showTruck(function(data) {
+    var hbsObject = {
+      truck: data
+    };
+    console.log(hbsObject);
+   res.render("add-truck", hbsObject);
+  });
 });
+/* router.get("/addtruck/menu", function(req, res) {
+  trucks.showDish(function(data) {
+    var hbsObject = {
+      menu: data
+    };
+    console.log(hbsObject);
+    res.render("add-menu", hbsObject);
+  });
+}); */
 
 router.get("/:location", function(req, res) {
   var condition = "location = " + '"' + req.params.location + '"';
@@ -39,9 +58,9 @@ router.get("/:location", function(req, res) {
 });
 
 router.get("/:location/:truck", function(req, res) {
-  var condition = "location = " + '"' + req.params.location + '"';
+  var condition = "name = " + '"' + req.params.truck + '"';
   console.log("condition", condition);
-  trucks.selectTrucks(
+  trucks.menuTrucks(
     condition,    
     function(data) {
     var hbsObject = {
@@ -52,13 +71,20 @@ router.get("/:location/:truck", function(req, res) {
   });
 });
 
-/* router.post("/api/burgers", function(req, res) {
-  burger.insertOne(["burger_name", "devoured"], [req.body.burger_name, req.body.devoured], function(result) {
-    // Send back the ID of the new quote
+router.post("/api/trucks", function(req, res) {
+  trucks.insertTruck(["name", "location", "type_food", "dish_name", "dish_price"], [req.body.truck_name, req.body.truck_location, req.body.truck_type, req.body.dish_name, req.body.dish_price], function(result) {
+
     res.json({ id: result.insertId });
   });
 });
 
+/* router.post("/api/menu", function(req, res) {
+  trucks.insertMenu(["name", "dish_name", "dish_price"], [req.body.truck_name, req.body.dish_name, req.body.dish_price], function(result) {
+ 
+    res.json({ id: result.insertId });
+  });
+}); */
+/*
 router.put("/api/burgers/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 

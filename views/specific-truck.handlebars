@@ -1,9 +1,8 @@
 <div class="container">
-
     <div class="row">
         <div class="col-sm-12">
             <center>
-                <p>These are the trucks in {{ trucks.[0].location }}</p>
+                <h1>This is the menu for {{ menu.[0].name }}</h1>
             </center>
         </div>
     </div>
@@ -12,10 +11,11 @@
         <div class="col-md-12">
             <center>
 
-                {{#each trucks}}
-                <a href="/{{this.location}}/{{this.name}}" class="truckButton" data-id="{{this.name}}">
-                    {{this.name}}
-                </a>
+                {{#each menu}}
+
+                <p> Dish name:{{this.dish_name}}</p>
+                <p> Price:{{this.dish_price}}</p>
+
                 <br>
                 {{/each}}
 

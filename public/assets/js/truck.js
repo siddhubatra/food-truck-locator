@@ -1,43 +1,56 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
-  $(".change-devoured").on("click", function(event) {
-    var id = $(this).data("id");
-    var newBurger = $(this).data("newburger");
+/* $(".create-menu").on("submit", function(event) {
 
-    var newBurgerState = {
-      devoured: newBurger
+  event.preventDefault();
+
+    var newDish = {
+      truck_name: $("#truckName").val().trim(),
+      dish_name: $("#dish").val().trim(),
+      dish_price: $("#price").val().trim()
     };
 
     // Send the PUT request.
-    $.ajax("/api/burgers/" + id, {
-      type: "PUT",
-      data: newBurgerState
+    $.ajax("/api/menu",{
+      type: "POST",
+      data: newDish
     }).then(
       function() {
-        console.log("changed sleep to", newBurger);
-        // Reload the page to get the updated list
-        location.reload();
+        console.log("dish plate posted");
+        console.log(newDish)
+      location.reload();
+        
       }
     );
-  });
+  }); */
 
-  $(".create-form").on("submit", function(event) {
-    // Make sure to preventDefault on a submit event.
+  $(".create-truck").on("submit", function(event) {
+
     event.preventDefault();
 
-    var newBurger = {
-      burger_name: $("#ca").val().trim(),
+    var newTruck = {
+      truck_name: $("#truckName").val().trim(),
+      truck_location: $("#truckLocation").val().trim(),
+      truck_type: $("#cuisineName").val().trim(),
+      dish_name: $("#dish").val().trim(),
+      dish_price: $("#price").val().trim(),
+      submitted: false,
+      approved: true
     };
 
-    // Send the POST request.
-    $.ajax("/api/burgers", {
+  
+    $.ajax("/api/trucks", {
       type: "POST",
-      data: newBurger
+      data: newTruck
     }).then(
       function() {
-        console.log("created new Burger");
-        // Reload the page to get the updated list
-        location.reload();
+        console.log("created new Truck");
+        console.log(newTruck) 
+        alert("Your dish was succesfully added");
+        return false;
+        
+        
+        
       }
     );
   });
