@@ -3,15 +3,35 @@
 
 <head>
 	<meta charset="UTF-8">
+	<title>Food Truck Locator!</title>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/assets/js/truck.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
-	<title>MVC With Cats!</title>
-	<script src="https://code.jquery.com/jquery.js"></script>
-	<script src="/assets/js/cats.js"></script>
+	<script src="https://kit.fontawesome.com/020cf78319.js"></script>
 </head>
 
 <body>
+	{{!-- Home button --}}
+	<p id="homeBtn">
+		<a href="/"><i class="fas fa-home" id="home"></i></a>
+	</p>
+	{{!-- Header Image --}}
+	<div class="container" id="head">
+		<div class="ui grid">
+			<div class="sixteen wide column">
+				<img id="headImg" src="/assets/img/foodTruckLogo.png">
+			</div>
+		</div>
+	</div>
 	{{{ body }}}
+	{{!-- Footer --}}
+	<footer>
+		<div class="ui container">
+			<p id="footer-text">Made with love by <i class="fas fa-futbol"></i> <i class="fas fa-dumbbell"></i> <i
+					class="fas fa-guitar"></i><i class="fas fa-swimmer"></i></p>
+		</div>
+	</footer>
 </body>
 
 </html>

@@ -1,25 +1,48 @@
-<h2>Add a Truck</h2>
-<form class="create-form">
+<center>
+    <h3>Add a Truck</h3>
+</center>
 
-    <div class="form-group">
-        <label for="truckName">Truck Name:</label>
-        <input type="text" id="truckName" name="truckName">
+<br>
+
+{{!-- Form for submitting truck info --}}
+<div class="ui centered cards">
+    <div class="card">
+        <div class="content">
+            <form class="ui form create-truck">
+                <div class="field">
+                    <label>Truck Name</label>
+                    <input type="text" id="truckName" name="truckName" placeholder="Joey's Tacos">
+                </div>
+            
+                <label for="truckLocation">Truck Location:</label>
+                <select name="locationDropDown" id="truckLocation">
+                    <option>Ballston</option>
+                    <option>Crystal City</option>
+                    <option>Georgetown</option>
+                    <option>District Wharf</option>
+                </select>
+
+                <div class="field">
+                    <label>Type of Cuisine:</label>
+                    <input type="text" id="cuisineName" name="cuisineName" placeholder="Indian">
+                </div>
+                <div class="field">
+                    <label>Add Dish</label>
+                    <div class="two fields">
+                        <div class="field">
+                            <input type="text" name="dish" id="dish" placeholder="Fried Chicken">
+                        </div>
+                        <div class="field">
+                            <input type="text" name="price" id="price" placeholder="10.50">
+                        </div>
+                    </div>
+                </div>
+                <button class="ui button" type="submit">Submit</button>
+            </form>
+
+        </div>
+
     </div>
 
-    <div class="form-group">
-        <label for="truckLocation">Truck Location:</label>
-        <select name="locationDropDown">
-            {{#each locations}}
-            <option> {{this.location}} </option>
-            {{/each}}
-        </select>
-        <br><br>
-    </div>
-
-    <div class="form-group">
-        <label for="cuisineName">Type of Cuisine (ex: Thai):</label>
-        <input type="text" id="cuisineName" name="cuisineName">
-    </div>
-
-    <button type="submit">Add Truck</button>
-</form>
+</div>
+<br>

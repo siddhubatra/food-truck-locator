@@ -1,29 +1,45 @@
 <div class="container">
+  <div id="stuff">
+    <h1>Hungry?</h1>
+    <h3>Find a truck near you.</h3>
+  </div>
+{{!-- Menu with available locations --}}
+  <div id="pics">
+    <div class="ui grid">
+      <div class="row">
 
-  <div class="row">
-    <div class="col-sm-12">
-      <center>
-        <h1>Food Truck Locator</h1>
-      </center>
+        <div class="four wide column img-wrap">
+          <a href="/ballston">
+            <img src="/assets/img/ballston-city.jpg">
+            <p class="label" id="ballston-label">Ballston</p>
+          </a>
+        </div>
+        <div class="four wide column img-wrap">
+          <a href="/Crystal City">
+            <img src="/assets/img/crystalcity.jpg">
+            <p class="label" id="crystalcity-label">Crystal City</p>
+          </a>
+        </div>
+        <div class="four wide column img-wrap">
+          <a href="/georgetown">
+            <img src="/assets/img/georgetown-city.jpg">
+            <p class="label" id="georgetown-label">Georgetown</p>
+          </a>
+        </div>
+        <div class="four wide column img-wrap">
+          <a href="/District Wharf">
+            <img src="/assets/img/district-wharf.jpg">
+            <p class="label" id="wharf-label">District Wharf</p>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12">
-      <center>
-        <ul>
-          {{#each locations}}
-          <li><button class="locationButton" data-id="{{this.id}}">
-              {{this.location}}
-            </button></li>
-          {{/each}}
-        </ul>
-        <button>
-          <a href="/add-truck">Got a Truck? Add it to Our Database!</a>
-        </button>
-
-      </center>
-    </div>
+{{!-- Where new trucks can go add their truck info --}}
+  <div id="stuff">
+    <h3>Got a truck?</h3>
+    <a href="/addtruck"><button class=" massive ui secondary basic button">Submit it to our platform!</button></a>
   </div>
 
 </div>

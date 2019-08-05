@@ -1,24 +1,32 @@
-INSERT INTO cats
-    (name)
+INSERT INTO trucks
+    (name, location, type_food, approved, dish_name, dish_price, submitted)
 VALUES
-    ('Meeses');
-INSERT INTO cats
-    (name)
+    ("Sid's Kabob", 'Ballston', 'Kabob', true, 'Lamb over rice', "10", true);
+INSERT INTO trucks
+    (name, location, type_food, approved, dish_name, dish_price, submitted)
 VALUES
-    ('Bobbi');
-INSERT INTO cats
-    (name, sleepy)
+    ("Sid's Kabob", 'Ballston', 'Kabob', true, 'Chiken over rice', "8", true);
+INSERT INTO trucks
+    (name, location, type_food, approved, dish_name, dish_price, submitted)
 VALUES
-    ('Sylvester', true);
-INSERT INTO cats
-    (name, sleepy)
+    ("Jose's Tacos", 'Crystalcity', 'Mexican', true, 'Chiken tacos', "3", true);
+INSERT INTO trucks
+    (name, location, type_food, approved, dish_name, dish_price, submitted)
 VALUES
-    ('Marilyn Manson', true);
-INSERT INTO cats
-    (name, sleepy)
+    ("Jose's Tacos", 'Crystalcity', 'Mexican', true, 'Beef tacos', "4", true);
+INSERT INTO trucks
+    (name, location, type_food, approved, dish_name, dish_price, submitted)
 VALUES
-    ('Joe Biden', true);
-INSERT INTO cats
-    (name)
+    ("Tyler's Jamaican Delights", 'Georgetown', 'Jamaican', true, 'Fish and Rice', "10", true);
+INSERT INTO trucks
+    (name, location, type_food, approved, dish_name, dish_price, submitted)
 VALUES
-    ('Owens');
+    ("Tyler's Jamaican Delights", 'Georgetown', 'Jamaican', true, 'Fried Fish', "12", true);
+INSERT INTO trucks
+    (name, location, type_food, approved, dish_name, dish_price, submitted)
+VALUES
+    ("Abhi's Protein Shakes", 'Wharf', 'Proteins', true, 'Banana and Avocado Protein', "12", true);
+INSERT INTO trucks
+    (name, location, type_food, approved, dish_name, dish_price, submitted)
+VALUES
+    ("Abhi's Protein Shakes", 'Wharf', 'Proteins', true, 'Strawberry and Milk Protein', "16", true);
